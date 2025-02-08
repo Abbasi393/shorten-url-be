@@ -1,8 +1,8 @@
-"""added url table
+"""Created data model for url table
 
-Revision ID: 3afc44652de6
+Revision ID: 2c09dc950754
 Revises: 5bfbe859985f
-Create Date: 2025-02-08 16:50:04.214263
+Create Date: 2025-02-08 17:58:31.888221
 
 """
 from typing import Sequence, Union
@@ -12,7 +12,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision: str = '3afc44652de6'
+revision: str = '2c09dc950754'
 down_revision: Union[str, None] = '5bfbe859985f'
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None

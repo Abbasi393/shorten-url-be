@@ -1,18 +1,11 @@
+import logging
 from fastapi import FastAPI
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-
 from app.core.config import settings
+from app.routes import (url_router, user_router)
 
 app = FastAPI()
+app.include_router(url_router)
+app.include_router(user_router)
 
-engine = create_engine(settings.database_url)
-db_session = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-
-def get_session():
-    db = db_session()
-    try:
-        yield db
-    finally:
-        db.close()
-
+logger = logging.getLogger()
+logger.info(f'App is running in environment {settings.environment}')
