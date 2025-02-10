@@ -11,6 +11,7 @@ class Settings(BaseSettings):
 
 
 class TinyUrlSettings(Settings):
+    base_url: str = None
     api_url_prefix: str = None
     database_url: str = None
     secret_key: str = None

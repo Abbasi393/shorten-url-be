@@ -23,7 +23,6 @@ def upgrade() -> None:
     op.create_table('urls',
     sa.Column('long_url', sa.String(), nullable=False),
     sa.Column('short_code', sa.String(), nullable=False),
-    sa.Column('expiry_date', sa.DateTime(), nullable=True),
     sa.Column('id', sa.Integer(), autoincrement=True, nullable=False),
     sa.Column('is_enabled', sa.Boolean(), nullable=True),
     sa.Column('created_on', sa.DateTime(), nullable=False),
